@@ -1,0 +1,198 @@
+// Variables
+$black: #000000;
+$white: white;
+$azure: azure;
+$light-blue: #4caef0;
+$dark-gray: rgb(34, 32, 32);
+$accent-color: rgb(166, 255, 0);
+$font-zen: "Zen Dots", sans-serif;
+$font-gugi: "Gugi", sans-serif;
+$font-syncopate: "Syncopate", sans-serif;
+$font-saira: "Saira Stencil One", sans-serif;
+
+// Google Fonts
+.zen-dots-regular {
+  font-family: $font-zen;
+  font-weight: 400;
+  font-style: normal;
+}
+.gugi-regular {
+  font-family: $font-gugi;
+  font-weight: 400;
+  font-style: normal;
+}
+.syncopate-bold {
+  font-family: $font-syncopate;
+  font-weight: 700;
+  font-style: normal;
+}
+
+// General Elements
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  min-width: 320px;
+  font-family: $font-gugi;
+  box-sizing: border-box;
+}
+
+strong {
+  font-family: $font-saira;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+// Footer
+footer {
+  background-color: $black;
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px 0;
+  font-family: $font-zen;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  color: $white;
+
+  p:nth-child(2) {
+    color: $accent-color;
+  }
+}
+
+// Header
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: $black;
+  padding-top: 20px;
+
+  img {
+    height: 200px;
+    width: 200px;
+    border: 10px solid $black;
+    border-radius: 100%;
+    align-self: center;
+    animation: spin 30s linear infinite;
+  }
+
+  h1 {
+    font-family: $font-zen;
+    text-align: center;
+    width: fit-content;
+    align-self: center;
+    border-bottom: 2px solid $accent-color;
+    color: $accent-color;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Game Section
+#divGame {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  box-shadow: 0px 0px 12px 2px $black;
+  margin-bottom: 1px;
+
+  h2 {
+    text-align: center;
+    display: inline;
+    height: fit-content;
+    background-color: $dark-gray;
+    margin: 0;
+    padding: 20px 0;
+    color: $azure;
+  }
+}
+
+#game-stage {
+  width: 100%;
+  max-width: 1180px;
+}
+
+// Form, Buttons, and Misc
+#word-display {
+  font-size: 24px;
+  letter-spacing: 10px;
+  margin: 20px;
+}
+
+input,
+button {
+  padding: 10px;
+  margin: 10px;
+  font-family: $font-zen;
+}
+
+button {
+  background-color: $light-blue;
+  color: $white;
+  border: none;
+  cursor: pointer;
+
+  &#submit-guess {
+    color: $black;
+  }
+}
+
+#game-results {
+  padding: 10px;
+  text-align: center;
+  color: $black;
+  font-family: $font-syncopate;
+}
+
+#filler {
+  height: 112px;
+  background-color: $dark-gray;
+}
+
+.hidden {
+  display: none;
+}
+
+// Media Queries
+@media (min-width: 680px) {
+  header {
+    flex-direction: row;
+    justify-content: left;
+    padding-left: 20px;
+    padding-bottom: 20px;
+
+    h1 {
+      font-size: 60px;
+      height: fit-content;
+      margin-left: 77px;
+      border-bottom: 2px solid $accent-color;
+    }
+  }
+
+  main {
+    justify-content: left;
+    gap: 20px;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}

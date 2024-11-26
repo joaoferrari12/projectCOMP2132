@@ -1,0 +1,175 @@
+.zen-dots-regular {
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gugi-regular {
+  font-family: "Gugi", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.syncopate-bold {
+  font-family: "Syncopate", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  min-width: 320px;
+  font-family: "Gugi", sans-serif;
+  box-sizing: border-box;
+}
+
+strong {
+  font-family: "Saira Stencil One", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+footer {
+  background-color: #000000;
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px 0;
+  font-family: "Zen Dots", sans-serif;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  color: white;
+}
+footer p:nth-child(2) {
+  color: rgb(166, 255, 0);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  padding-top: 20px;
+}
+header img {
+  height: 200px;
+  width: 200px;
+  border: 10px solid #000000;
+  border-radius: 100%;
+  align-self: center;
+  animation: spin 30s linear infinite;
+}
+header h1 {
+  font-family: "Zen Dots", sans-serif;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
+  border-bottom: 2px solid rgb(166, 255, 0);
+  color: rgb(166, 255, 0);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#divGame {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  box-shadow: 0px 0px 12px 2px #000000;
+  margin-bottom: 1px;
+}
+#divGame h2 {
+  text-align: center;
+  display: inline;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: rgb(34, 32, 32);
+  margin: 0;
+  padding: 20px 0;
+  color: azure;
+}
+
+#game-stage {
+  width: 100%;
+  max-width: 1180px;
+}
+
+#word-display {
+  font-size: 24px;
+  letter-spacing: 10px;
+  margin: 20px;
+}
+
+input,
+button {
+  padding: 10px;
+  margin: 10px;
+  font-family: "Zen Dots", sans-serif;
+}
+
+button {
+  background-color: #4caef0;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button#submit-guess {
+  color: #000000;
+}
+
+#game-results {
+  padding: 10px;
+  text-align: center;
+  color: #000000;
+  font-family: "Syncopate", sans-serif;
+}
+
+#filler {
+  height: 112px;
+  background-color: rgb(34, 32, 32);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 680px) {
+  header {
+    flex-direction: row;
+    justify-content: left;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  header h1 {
+    font-size: 60px;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-left: 77px;
+    border-bottom: 2px solid rgb(166, 255, 0);
+  }
+  main {
+    justify-content: left;
+    gap: 20px;
+  }
+  footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}/*# sourceMappingURL=styles.css.map */
